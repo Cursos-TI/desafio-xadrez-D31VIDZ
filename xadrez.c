@@ -8,8 +8,8 @@ int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
     //Jogo Xadrez com três peças torre, Bispo e rainha
-    int DTorre, DBispo, DRainha;
-    int torre = 0, bispo = 0, rainha;
+    int DTorre, DBispo, DRainha, Dcavalo;
+    int torre = 0, bispo = 0, rainha, cavalo = 0;
 
     //Movimento da torre onde o usuario fala a direção.
     printf("** Direções da torre **\n");
@@ -44,7 +44,7 @@ int main() {
     // Movimento do bispo 5 casas em diagonal para cima e direita
     printf("\n Movimento do Bispo: \n");
     do
-    {
+    {      
         printf("cima, direita \n");
         bispo++;
     } while (bispo < 5);
@@ -53,6 +53,30 @@ int main() {
     printf("\n Movimento da rainha 8 casas para a esquerda \n");
     for (rainha = 0; rainha < 8; rainha++){
         printf("esquerda \n");
+    }
+
+        //Movimento do cavalo
+    printf("** Direçao do cavalo **\n");
+    printf("1. Direita\n");
+    printf("2. Esquerda\n");
+    printf("Digite a direcao do cavalo: ");
+    scanf("%d", &Dcavalo);
+
+    for (int i = 0; i < 1; i++) {
+        printf("Baixo, Baixo \n");
+        while (cavalo < 1){
+            if (Dcavalo == 1) {
+                printf("Direita");
+                cavalo++;
+            }else if (Dcavalo == 2) {
+                printf("Esquerda \n");
+                cavalo++;
+            }else {
+            printf("opcao invalida\n");
+            printf("Digite novamente: ");
+            scanf("%d", &Dcavalo);  
+            } 
+        }
     }
     return 0;
 }
